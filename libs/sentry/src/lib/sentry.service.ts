@@ -9,6 +9,7 @@ export class SentryService implements ErrorHandler {
               @Inject(SENTRY_CAPTURE_EXCEPTION) private captureException: any,
               @Inject(SENTRY_INIT) init: any
   ) {
+
     init(browserOptions);
   }
 
