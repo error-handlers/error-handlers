@@ -15,7 +15,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@error-handlers/core": ["libs/core/src/index.ts"],
+      "@error-handlers/sentry": ["libs/sentry/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

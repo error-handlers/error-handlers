@@ -17,6 +17,12 @@
     "sandbox-e2e": {
       "tags": [],
       "implicitDependencies": ["sandbox"]
+    },
+    "core": {
+      "tags": []
+    },
+    "sentry": {
+      "tags": []
     }
   }
 }

@@ -1,0 +1,13 @@
+{
+  "name": "@error-handlers/sentry",
+  "version": "0.0.0-development.0",
+  "peerDependencies": {
+    "@angular/common": "^9.0.7",
+    "@angular/core": "^9.0.7",
+    "@error-handlers/core": "*",
+    "tslib": "^1.10.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
