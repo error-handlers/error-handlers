@@ -1,1 +1,2 @@
-export * from './lib/sentry-error-handlers.module';
+export * from './lib/sentry.module';
+export * from './lib/sentry.service';

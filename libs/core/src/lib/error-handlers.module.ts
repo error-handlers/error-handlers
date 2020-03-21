@@ -33,7 +33,7 @@ export class ErrorHandlersModule {
     };
   }
 
-  public static addErrorHandlers(errorHandlers: ErrorHandlerType[] = []): ModuleWithProviders<ErrorHandlersModule> {
+  public static addErrorHandlers(errorHandlers: ErrorHandlerType[]): ModuleWithProviders<ErrorHandlersModule> {
     return {
       ngModule: ErrorHandlersModule,
       providers: [
