@@ -13,7 +13,7 @@ describe('ErrorHandlersModule', () => {
       imports: [ErrorHandlersModule.forRoot()]
     });
 
-    const errorHandler = TestBed.get(ErrorHandler);
+    const errorHandler = TestBed.inject(ErrorHandler);
 
     expect(errorHandler).toBeInstanceOf(ErrorHandlersService);
   });
@@ -24,7 +24,7 @@ describe('ErrorHandlersModule', () => {
     });
 
     function throwFn() {
-      return TestBed.get(ErrorHandler);
+      return TestBed.inject(ErrorHandler);
     }
 
     expect(throwFn).toThrow(Error);
