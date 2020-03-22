@@ -3,8 +3,19 @@ import { ErrorHandlersService, ErrorHandlerType } from './error-handlers.service
 
 export const ERROR_HANDLERS_TOKEN = new InjectionToken<ErrorHandlerType[][]>('ERROR_HANDLERS_TOKEN');
 
+/**
+ * Error handler configuration and registration module
+ */
 @NgModule()
 export class ErrorHandlersModule {
+
+  /**
+   *
+   * @param allErrorHandlers
+   * @param errorHandlerService
+   * @param errHandler
+   * @internal
+   */
   constructor(@Optional() @Inject(ERROR_HANDLERS_TOKEN) allErrorHandlers: ErrorHandlerType[][],
               errorHandlerService: ErrorHandlersService,
               errHandler: ErrorHandler) {
@@ -17,6 +28,17 @@ export class ErrorHandlersModule {
     );
   }
 
+  /**
+   * Returns the setting for import to the root module
+   * @param errorHandlers Array of error handlers
+   *
+   * @example
+   *
+   * @NgModule({
+   *   imports: [ErrorHandlersModule.forRoot([CustomErrorHandler])]
+   * })
+   * export class AppModule { }
+   */
   public static forRoot(errorHandlers: ErrorHandlerType[] = []): ModuleWithProviders<ErrorHandlersModule> {
     return {
       ngModule: ErrorHandlersModule,
@@ -33,6 +55,17 @@ export class ErrorHandlersModule {
     };
   }
 
+  /**
+   * Error handlers registration in the child module
+   * @param errorHandlers Array of error handlers
+   *
+   * @example
+   *
+   * @NgModule({
+   *   imports: [ErrorHandlersModule.addErrorHandlers([CustomErrorHandler])]
+   * })
+   * export class ChildModule { }
+   */
   public static addErrorHandlers(errorHandlers: ErrorHandlerType[]): ModuleWithProviders<ErrorHandlersModule> {
     return {
       ngModule: ErrorHandlersModule,
