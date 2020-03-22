@@ -1,4 +1,4 @@
-name: Release
+name: Release Check
 
 on:
   push:
@@ -10,10 +10,8 @@ on:
       - alpha
 
 jobs:
-  build:
-
+  release:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v1
       - uses: actions/cache@v1
