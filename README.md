@@ -4,12 +4,12 @@
 
 # @error-handlers
 [![npm](https://badgen.net/npm/v/@error-handlers/core)](https://www.npmjs.com/package/@error-handlers/core)
-![npm](https://badgen.net/github/license/error-handlers/error-handlers)
+![license](https://badgen.net/github/license/error-handlers/error-handlers)
 
 [ErrorHandler](https://angular.io/api/core/ErrorHandler) implementation for [Angular](https://github.com/angular/angular) for the multiple definition of error hooks
 
 ## Packages
 
-- [@error-handlers/core](./libs/core) - module and service for configuring
-- [@error-handlers/sentry](./libs/sentry) - module and service for reporting to [Sentry](https://sentry.io/)
+- ![](https://badgen.net/bundlephobia/minzip/@error-handlers/core) [@error-handlers/core](./libs/core) - module and service for configuring
+- ![](https://badgen.net/bundlephobia/minzip/@error-handlers/sentry) [@error-handlers/sentry](./libs/sentry) - module and service for reporting to [Sentry](https://sentry.io/)
 - [@error-handlers/sentry/server](./libs/sentry/server) - SSR module for reporting to [Sentry](https://sentry.io/)
