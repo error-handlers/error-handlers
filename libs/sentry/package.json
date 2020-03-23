@@ -4,8 +4,11 @@
   "peerDependencies": {
     "@angular/common": "^9.0.7",
     "@angular/core": "^9.0.7",
-    "@error-handlers/core": "*",
-    "tslib": "^1.10.0"
+    "@error-handlers/core": "^0.1.0",
+    "tslib": "^1.10.0",
+    "@sentry/browser": "^5.15.0",
+    "@sentry/node": "^5.15.0",
+    "@sentry/minimal": "^5.15.0"
   },
   "publishConfig": {
     "access": "public"

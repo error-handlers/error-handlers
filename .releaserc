@@ -8,6 +8,12 @@
         "pkgRoot": "./dist/libs/core"
       }
     ],
+    [
+      "@semantic-release/npm",
+      {
+        "pkgRoot": "./dist/libs/sentry"
+      }
+    ],
     "@semantic-release/github"
   ]
 }
