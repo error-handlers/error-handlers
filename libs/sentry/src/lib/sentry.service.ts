@@ -4,9 +4,13 @@ import { BrowserOptions } from '@sentry/browser';
 
 @Injectable()
 export class SentryService implements ErrorHandler {
+  public readonly sentry: Readonly<Sentry>;
+
   constructor(@Inject(SENTRY_BROWSER_OPTIONS) browserOptions: BrowserOptions,
-              @Inject(SENTRY) public readonly sentry: Readonly<Sentry>) {
-    sentry.init(browserOptions);
+              @Inject(SENTRY) sentry: Sentry) {
+    this.sentry = sentry;
+
+    this.sentry.init(browserOptions);
   }
 
   handleError(error: any): void {
