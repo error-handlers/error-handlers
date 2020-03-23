@@ -3,7 +3,8 @@
 </p>
 
 # @error-handlers
-
+[![npm](https://badgen.net/npm/v/@error-handlers/core)](https://www.npmjs.com/package/@error-handlers/core)
+![npm](https://badgen.net/github/license/error-handlers/error-handlers)
 
 [ErrorHandler](https://angular.io/api/core/ErrorHandler) implementation for [Angular](https://github.com/angular/angular) for the multiple definition of error hooks
 

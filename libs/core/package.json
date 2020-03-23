@@ -12,7 +12,7 @@
   "description": "ErrorHandler implementation for Angular for the multiple definition of error hooks",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/error-handles/error-handlers.git"
+    "url": "git+https://github.com/error-handlers/error-handlers.git"
   },
   "keywords": [
     "angular",
@@ -23,7 +23,7 @@
   ],
   "author": "Igor Katsuba <katsuba.igor@gmail.com>",
   "bugs": {
-    "url": "https://github.com/error-handles/error-handlers/issues"
+    "url": "https://github.com/error-handlers/error-handlers/issues"
   },
-  "homepage": "https://github.com/error-handles/error-handlers#readme"
+  "homepage": "https://github.com/error-handlers/error-handlers#readme"
 }
