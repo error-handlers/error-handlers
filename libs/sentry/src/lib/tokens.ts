@@ -1,17 +1,66 @@
 import { InjectionToken } from '@angular/core';
-import { BrowserOptions, captureException, init } from '@sentry/browser';
+import * as sentry from '@sentry/browser';
+import {
+  addBreadcrumb,
+  addGlobalEventProcessor,
+  BrowserOptions,
+  captureEvent,
+  captureException,
+  captureMessage,
+  close,
+  configureScope,
+  defaultIntegrations,
+  flush,
+  forceLoad,
+  getCurrentHub,
+  getHubFromCarrier,
+  init,
+  lastEventId,
+  onLoad,
+  setContext,
+  setExtra,
+  setExtras,
+  setTag,
+  setTags,
+  setUser,
+  showReportDialog,
+  withScope,
+  wrap
+} from '@sentry/browser';
 
-export const SENTRY_INIT = new InjectionToken<typeof init>('SENTRY_INIT', {
+export interface Sentry {
+  init: typeof init;
+
+  addBreadcrumb: typeof addBreadcrumb;
+  captureEvent: typeof captureEvent;
+  captureException: typeof captureException;
+  captureMessage: typeof captureMessage;
+  configureScope: typeof configureScope;
+  setContext: typeof setContext;
+  setExtra: typeof setExtra;
+  setExtras: typeof setExtras;
+  setTag: typeof setTag;
+  setTags: typeof setTags;
+  setUser: typeof setUser;
+  withScope: typeof withScope;
+
+  close: typeof close;
+  showReportDialog: typeof showReportDialog;
+  addGlobalEventProcessor: typeof addGlobalEventProcessor;
+  defaultIntegrations: typeof defaultIntegrations;
+  flush: typeof flush;
+  forceLoad: typeof forceLoad;
+  getCurrentHub: typeof getCurrentHub;
+  getHubFromCarrier: typeof getHubFromCarrier;
+  lastEventId: typeof lastEventId;
+  onLoad: typeof onLoad;
+  wrap: typeof wrap;
+}
+
+export const SENTRY = new InjectionToken<Sentry>('SENTRY', {
   providedIn: 'root',
   factory() {
-    return init;
-  }
-});
-
-export const SENTRY_CAPTURE_EXCEPTION = new InjectionToken<typeof captureException>('SENTRY_CAPTURE_EXCEPTION', {
-  providedIn: 'root',
-  factory() {
-    return captureException;
+    return sentry;
   }
 });
 
