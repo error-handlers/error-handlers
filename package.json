@@ -58,6 +58,8 @@
     "@semantic-release/npm": "^7.0.5",
     "@semantic-release/release-notes-generator": "^9.0.1",
     "@sentry/browser": "^5.15.0",
+    "@sentry/minimal": "^5.15.0",
+    "@sentry/node": "^5.15.0",
     "@types/jest": "24.9.1",
     "@types/node": "~8.9.4",
     "codelyzer": "~5.0.1",

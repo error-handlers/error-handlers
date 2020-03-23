@@ -1,8 +1,9 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
+import * as sentry from '@sentry/browser';
 import { BrowserOptions } from '@sentry/browser';
 import { ErrorHandlersModule } from '@error-handlers/core';
 import { SentryService } from './sentry.service';
-import { SENTRY_BROWSER_OPTIONS } from './tokens';
+import { SENTRY, SENTRY_OPTIONS } from './tokens';
 
 @NgModule({
   imports: [
@@ -21,8 +22,12 @@ export class SentryModule {
       providers: [
         SentryService,
         {
-          provide: SENTRY_BROWSER_OPTIONS,
+          provide: SENTRY_OPTIONS,
           useValue: browserOptions
+        },
+        {
+          provide: SENTRY,
+          useValue: sentry
         }
       ]
     };

@@ -17,7 +17,8 @@
     "baseUrl": ".",
     "paths": {
       "@error-handlers/core": ["libs/core/src/index.ts"],
-      "@error-handlers/sentry": ["libs/sentry/src/index.ts"]
+      "@error-handlers/sentry": ["libs/sentry/src/index.ts"],
+      "@error-handlers/sentry/server": ["libs/sentry/server/src/public_api.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
