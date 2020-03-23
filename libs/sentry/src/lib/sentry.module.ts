@@ -5,6 +5,21 @@ import { ErrorHandlersModule } from '@error-handlers/core';
 import { SentryService } from './sentry.service';
 import { SENTRY, SENTRY_OPTIONS } from './tokens';
 
+/**
+ * Sentry module
+ *
+ * For SSR {@see ServerSentryModule}
+ *
+ * @example
+ *
+ * @NgModule({
+ *   import: [
+ *     ErrorHandlersModule.forRoot(),
+ *     SentryModule.forRoot()
+ *   ]
+ * })
+ * export class AppModule { }
+ */
 @NgModule({
   imports: [
     ErrorHandlersModule.addErrorHandlers([
