@@ -5,6 +5,8 @@
 # @error-handlers
 [![npm](https://badgen.net/npm/v/@error-handlers/core)](https://www.npmjs.com/package/@error-handlers/core)
 ![license](https://badgen.net/github/license/error-handlers/error-handlers)
+![typescript](https://img.shields.io/github/languages/top/error-handlers/error-handlers?color=green)
+[![test and lint](https://github.com/error-handlers/error-handlers/workflows/Lint%20and%20Test/badge.svg)](https://github.com/error-handlers/error-handlers/actions?query=workflow%3A%22Lint+and+Test%22)
 
 [ErrorHandler](https://angular.io/api/core/ErrorHandler) implementation for [Angular](https://github.com/angular/angular) for the multiple definition of error hooks
 
