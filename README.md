@@ -10,6 +10,6 @@
 
 ## Packages
 
-- ![](https://badgen.net/bundlephobia/minzip/@error-handlers/core) [@error-handlers/core](./libs/core) - module and service for configuring
-- ![](https://badgen.net/bundlephobia/minzip/@error-handlers/sentry) [@error-handlers/sentry](./libs/sentry) - module and service for reporting to [Sentry](https://sentry.io/)
-- [@error-handlers/sentry/server](./libs/sentry/server) - SSR module for reporting to [Sentry](https://sentry.io/)
+- [![@error-handlers/core](https://badgen.net/bundlephobia/minzip/@error-handlers/core)](https://bundlephobia.com/result?p=@error-handlers/core) [@error-handlers/core](./libs/core/README.md) - module and service for configuring
+- [![@error-handlers/sentry](https://badgen.net/bundlephobia/minzip/@error-handlers/sentry)](https://bundlephobia.com/result?p=@error-handlers/sentry@1.0.0) [@error-handlers/sentry](./libs/sentry/README.md) - module and service for reporting to [Sentry](https://sentry.io/)
+- [@error-handlers/sentry/server](./libs/sentry/server/README.md) - secondary entry point for [@error-handlers/sentry](./libs/sentry/README.md) - SSR module for reporting to [Sentry](https://sentry.io/)
