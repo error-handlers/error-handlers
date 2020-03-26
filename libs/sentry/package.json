@@ -1,34 +1,39 @@
 {
   "name": "@error-handlers/sentry",
   "version": "0.0.0-development.0",
-  "peerDependencies": {
-    "@angular/common": "^9.0.7",
-    "@angular/core": "^9.0.7",
-    "@error-handlers/core": "^0.1.0",
-    "tslib": "^1.10.0",
-    "@sentry/browser": "^5.15.0",
-    "@sentry/node": "^5.15.0",
-    "@sentry/core": "^5.15.0",
-    "@sentry/types": "^5.15.0"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
   "description": "ErrorHandler implementation for Angular for the multiple definition of error hooks",
+  "keywords": [
+    "error",
+    "angular",
+    "ngx",
+    "errors",
+    "capture",
+    "exception",
+    "error-hooks",
+    "errorhandler",
+    "handlers",
+    "sentry"
+  ],
+  "homepage": "https://github.com/error-handlers/error-handlers#readme",
+  "bugs": {
+    "url": "https://github.com/error-handlers/error-handlers/issues"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/error-handlers/error-handlers.git"
   },
-  "keywords": [
-    "angular",
-    "errorHandler",
-    "error",
-    "errors",
-    "exception"
-  ],
   "author": "Igor Katsuba <katsuba.igor@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/error-handlers/error-handlers/issues"
+  "peerDependencies": {
+    "@angular/common": "^9.0.7",
+    "@angular/core": "^9.0.7",
+    "@error-handlers/core": "^0.1.0",
+    "@sentry/browser": "^5.15.0",
+    "@sentry/core": "^5.15.0",
+    "@sentry/node": "^5.15.0",
+    "@sentry/types": "^5.15.0",
+    "tslib": "^1.10.0"
   },
-  "homepage": "https://github.com/error-handlers/error-handlers#readme"
+  "publishConfig": {
+    "access": "public"
+  }
 }
