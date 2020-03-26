@@ -1,9 +1,9 @@
-import { ModuleWithProviders, NgModule } from '@angular/core';
-import * as sentry from '@sentry/browser';
+import { Inject, ModuleWithProviders, NgModule } from '@angular/core';
 import { BrowserOptions } from '@sentry/browser';
 import { ErrorHandlersModule } from '@error-handlers/core';
 import { SentryService } from './sentry.service';
 import { SENTRY, SENTRY_OPTIONS } from './tokens';
+import { sentryBrowserFactory } from './sentry.factory';
 
 /**
  * Sentry module
@@ -31,7 +31,9 @@ import { SENTRY, SENTRY_OPTIONS } from './tokens';
   ]
 })
 export class SentryModule {
-  public static forRoot(browserOptions: BrowserOptions): ModuleWithProviders<SentryModule> {
+  public static forRoot(
+    browserOptions: BrowserOptions
+  ): ModuleWithProviders<SentryModule> {
     return {
       ngModule: SentryModule,
       providers: [
@@ -42,7 +44,8 @@ export class SentryModule {
         },
         {
           provide: SENTRY,
-          useValue: sentry
+          useValue: sentryBrowserFactory,
+          deps: [Inject(SENTRY_OPTIONS)]
         }
       ]
     };
