@@ -1,7 +1,7 @@
-import { ModuleWithProviders, NgModule } from '@angular/core';
+import { Inject, ModuleWithProviders, NgModule } from '@angular/core';
 import { SENTRY, SENTRY_OPTIONS } from '@error-handlers/sentry';
-import * as sentry from '@sentry/node';
 import { NodeOptions } from '@sentry/node';
+import { serverSentryFactory } from './server-sentry.factory';
 
 /**
  * Sentry module for SSR
@@ -18,13 +18,16 @@ import { NodeOptions } from '@sentry/node';
  */
 @NgModule()
 export class ServerSentryModule {
-  public static forRoot(options?: NodeOptions): ModuleWithProviders<ServerSentryModule> {
+  public static forRoot(
+    options?: NodeOptions
+  ): ModuleWithProviders<ServerSentryModule> {
     return {
       ngModule: ServerSentryModule,
       providers: [
         {
           provide: SENTRY,
-          useValue: sentry
+          useValue: serverSentryFactory,
+          deps: [Inject(SENTRY_OPTIONS)]
         },
         options
           ? {
