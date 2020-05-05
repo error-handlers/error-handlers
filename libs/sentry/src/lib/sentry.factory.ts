@@ -4,6 +4,7 @@ import {
   defaultIntegrations,
   Hub
 } from '@sentry/browser';
+import { makeMain } from '@sentry/hub';
 
 export function sentryBrowserFactory(options: BrowserOptions): Hub {
   const client = new BrowserClient({
@@ -11,5 +12,13 @@ export function sentryBrowserFactory(options: BrowserOptions): Hub {
     ...options
   });
 
-  return new Hub(client);
+  const hub = new Hub(client);
+
+  makeMain(hub);
+
+  hub.run(() => {
+    client.setupIntegrations();
+  });
+
+  return hub;
 }
