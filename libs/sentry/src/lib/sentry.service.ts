@@ -1,4 +1,4 @@
-import { ErrorHandler, Inject, Injectable } from '@angular/core';
+import { ErrorHandler, Inject, Injectable, OnDestroy } from '@angular/core';
 import { SENTRY, SENTRY_OPTIONS } from './tokens';
 import { Options } from '@sentry/types';
 import { Hub } from '@sentry/core';
@@ -7,7 +7,7 @@ import { Hub } from '@sentry/core';
  * An error handler for reporting to Sentry
  */
 @Injectable()
-export class SentryService implements ErrorHandler {
+export class SentryService implements ErrorHandler, OnDestroy {
   /**
    *
    * @param options
@@ -23,5 +23,9 @@ export class SentryService implements ErrorHandler {
     if (error) {
       this.sentry.captureException(error);
     }
+  }
+
+  ngOnDestroy(): void {
+    this.sentry.getClient()?.close();
   }
 }
